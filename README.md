@@ -1,5 +1,6 @@
 # Payment Card Scan API
-## MobiCard ScanAPI - Mobile & Hybrid App Integration
+## MobiCard ScanAPI - Method 1
+### PWA Implementation
 
 The pure JavaScript implementation can be easily integrated into mobile and hybrid applications using WebView components. This allows you to add card scanning functionality to Progressive Web Apps. 
 
