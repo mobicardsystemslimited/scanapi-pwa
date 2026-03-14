@@ -153,9 +153,9 @@ All flags are always returned and as either 0 or 1
 | `card_information.card_expiry_month` | **Yes** | Expiry month (2 digits) | `"12"` |
 | `card_information.card_expiry_year` | **Yes** | Expiry year (2 digits) | `"19"` |
 | `card_information.card_brand` | **Yes** | Card brand/scheme | `"MASTERCARD"` |
-| `card_information.card_category` | Only when available | Card category/type | `"PREPAID"` |
-| `card_information.card_holder_name` | Only when available | Card-holder name | `"JOHN DOE"` |
-| `card_information.card_bank_name` | Only when available | Issuing bank name | `"KCB BANK KENYA LIMITED"` |
+| `card_information.card_category` | Yes (defaults to "") | Card category/type | `"PREPAID"` |
+| `card_information.card_holder_name` | Yes (defaults to "") | Card-holder name | `"JOHN DOE"` |
+| `card_information.card_bank_name` | Yes (defaults to "") | Issuing bank name | `"KCB BANK KENYA LIMITED"` |
 | `card_information.card_confidence_score` | **Yes** | OCR confidence score (0.0-1.0) | `"0.7700"` (77%) |
 | `card_information.card_validation_checks.luhn_algorithm` | **Yes** | Luhn algorithm validation result | `true` |
 | `card_information.card_validation_checks.brand_prefix` | **Yes** | Brand prefix validation result | `false` |
@@ -165,11 +165,11 @@ All flags are always returned and as either 0 or 1
 | `card_exif_information.card_exif_flag` | **Yes** | EXIF data availability flag | `1` |
 | `card_exif_information.card_exif_tamper_flag` | **Yes** | EXIF data availability flag | `0` |
 | `card_exif_information.card_exif_is_instant_photo_flag` | **Yes** | Instant photo detection flag | `1` |
-| `card_exif_information.card_exif_original_timestamp` | Only when available | Original photo timestamp | `""` |
-| `card_exif_information.card_exif_file_datetime` | Only when available | File datetime from EXIF | `"2026-01-19 07:56:02"` |
-| `card_exif_information.card_exif_file_datetime_digitized` | Only when available | Digitized datetime from EXIF | `""` |
-| `card_exif_information.card_exif_device_model` | Only when available | Camera device model | `""` |
-| `card_exif_information.card_exif_device_make` | Only when available | Camera device manufacturer | `""` |
+| `card_exif_information.card_exif_original_timestamp` | Yes (defaults to "") | Original photo timestamp | `""` |
+| `card_exif_information.card_exif_file_datetime` | Yes (defaults to "") | File datetime from EXIF | `"2026-01-19 07:56:02"` |
+| `card_exif_information.card_exif_file_datetime_digitized` | Yes (defaults to "") | Digitized datetime from EXIF | `""` |
+| `card_exif_information.card_exif_device_model` | Yes (defaults to "") | Camera device model | `""` |
+| `card_exif_information.card_exif_device_make` | Yes (defaults to "") | Camera device manufacturer | `""` |
 | **card_risk_information** | | | |
 | `card_risk_information.card_possible_screenshot_flag` | **Yes** | Screenshot detection flag | `1` |
 | `card_risk_information.card_possible_edited_flag` | **Yes** | Image editing detection flag | `0` |
@@ -178,20 +178,20 @@ All flags are always returned and as either 0 or 1
 | `card_risk_information.card_risk_score` | **Yes** | Overall risk score (0.0-1.0) | `"0.0900"` (9%) |
 | **card_biin_information** | | | |
 | `card_biin_information.card_biin_flag` | **Yes** | BIIN data availability flag | `1` |
-| `card_biin_information.card_biin_number` | Only when available | Bank Identification Number | `"51733500"` |
-| `card_biin_information.card_biin_scheme` | Only when available | Card scheme from BIIN | `"MASTERCARD"` |
-| `card_biin_information.card_biin_prefix` | Only when available | Card prefix | `""` |
-| `card_biin_information.card_biin_type` | Only when available | Card type from BIIN | `"PREPAID"` |
-| `card_biin_information.card_biin_brand` | Only when available | Card brand description | `"Mastercard Prepaid General Spend"` |
-| `card_biin_information.card_biin_prepaid` | Only when available | Prepaid card indicator | `"Yes"` |
-| `card_biin_information.card_biin_bank_name` | Only when available | Issuing bank name from BIIN | `"KCB BANK KENYA LIMITED"` |
-| `card_biin_information.card_biin_bank_url` | Only when available | Bank website URL | `""` |
-| `card_biin_information.card_biin_bank_city` | Only when available | Bank city | `""` |
-| `card_biin_information.card_biin_bank_phone` | Only when available | Bank phone number | `""` |
-| `card_biin_information.card_biin_bank_logo` | Only when available | Bank logo URL | `""` |
-| `card_biin_information.card_biin_country_two_letter_code` | Only when available | Country ISO code | `null` |
-| `card_biin_information.card_biin_country_name` | Only when available | Country name | `"KENYA"` |
-| `card_biin_information.card_biin_country_numeric` | Only when available | Country numeric code | `"404"` |
+| `card_biin_information.card_biin_number` | Yes (defaults to "") | Bank Identification Number | `"51733500"` |
+| `card_biin_information.card_biin_scheme` | Yes (defaults to "") | Card scheme from BIIN | `"MASTERCARD"` |
+| `card_biin_information.card_biin_prefix` | Yes (defaults to "") | Card prefix | `""` |
+| `card_biin_information.card_biin_type` | Yes (defaults to "") | Card type from BIIN | `"PREPAID"` |
+| `card_biin_information.card_biin_brand` | Yes (defaults to "") | Card brand description | `"Mastercard Prepaid General Spend"` |
+| `card_biin_information.card_biin_prepaid` | Yes (defaults to "") | Prepaid card indicator | `"Yes"` |
+| `card_biin_information.card_biin_bank_name` | Yes (defaults to "") | Issuing bank name from BIIN | `"KCB BANK KENYA LIMITED"` |
+| `card_biin_information.card_biin_bank_url` | Yes (defaults to "") | Bank website URL | `""` |
+| `card_biin_information.card_biin_bank_city` | Yes (defaults to "") | Bank city | `""` |
+| `card_biin_information.card_biin_bank_phone` | Yes (defaults to "") | Bank phone number | `""` |
+| `card_biin_information.card_biin_bank_logo` | Yes (defaults to "") | Bank logo URL | `""` |
+| `card_biin_information.card_biin_country_two_letter_code` | Yes (defaults to "") | Country ISO code | `null` |
+| `card_biin_information.card_biin_country_name` | Yes (defaults to "") | Country name | `"KENYA"` |
+| `card_biin_information.card_biin_country_numeric` | Yes (defaults to "") | Country numeric code | `"404"` |
 | `card_biin_information.card_biin_risk_flag` | **Yes** | Fraud Control (Chargebacks) flag | `0` |
 | `addendum_data` | Only when sent | Custom data echoed back | `"your_custom_data..."` |
 
